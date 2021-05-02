@@ -50,3 +50,6 @@ p:not(blockquote p), dd { text-align: justify; }
 .bg-color2 { background-color: #D7E4BC; }
 .bg-color3 { background-color: #FFC4AC; }
 .bg-color4 { background-color: #D4E3FE, }
+
+address dt { font-size: 1.5em; }
+address a { text-decoration: none; }
