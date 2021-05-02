@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="ca">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="IT Academy - Sprint 2: maquetació II (Bootstrap)">
+	<meta name="keywords" content="HTML5, CSS3, Bootstrap">
+	<meta name="author" content="Rubèn Nieto Perarnau">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>S2: Bootstrap - IT Academy</title>
+
+	<!-- Bootstrap CSS -->
+	<!-- CDN -->
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
+	<!-- local -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<!-- Bootstrap ICONS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<!-- Fira Sans i Merriweather -->
+	<link
+		href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;500;900&family=Merriweather:wght@300&display=swap"
+		rel="stylesheet">
+
+	<!-- Els meus estils -->
+	<link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<!-- Login Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="loginModalLabel">Login</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tancar"></button>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal"
+						data-bs-target="#registreModal">Registre</button>
+					<button type="button" class="btn btn-primary">Entra</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Registre Modal -->
+	<div class="modal fade" id="registreModal" tabindex="-1" aria-labelledby="registreModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="registreModalLabel">Registre</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tancar"></button>
+				</div>
+				<div class="modal-body">
+					...
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal"
+						data-bs-target="#loginModal">Login</button>
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Registra't!</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm max-height-100">
+			<div class="container">
+				<a class="navbar-brand" href="#">
+					<img src="images/emotions.svg" alt="Logotip" height="50">
+					<div class="float-start text-logo">
+						<p>Laia Oliva</p>
+						<p>Psicoterapeuta</p>
+					</div>
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">Sobre mi
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="index.html#formacio">Formació</a></li>
+								<li><a class="dropdown-item" href="index.html#propia-experiencia">Pròpia vivència</a>
+								</li>
+								<li><a class="dropdown-item" href="index.html#com-treballo">Com treballo</a></li>
+								<li><a class="dropdown-item" href="index.html#coneixement-situat">Coneixement situat</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html#terapia">Teràpia psicològica</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html#tallers">Tallers</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html#contacte"><i class="bi bi-envelope"></i></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="tel:0034680663495"><i class="bi bi-telephone"></i></a>
+						</li>
+					</ul>
+				</div>
+				<form class="d-flex">
+					<button class="btn btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+						<i class="bi bi-box-arrow-in-right"></i> Login
+					</button>
+					<button class="btn btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#registreModal">
+						Registre
+					</button>
+				</form>
+			</div>
+		</nav>
+	</header>
+	<main class="container-fluid">
+		<header class="container mt-5">
+			<div class="row pb-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+				<div class="col-lg-5 p-3 p-lg-4 pt-lg-3">
+					<h1 class="display-5 lh-5 text-center">Hola, sóc la <strong>Laia</strong></h1>
+					<p class="lead lh-1 text-center">
+						Psicòloga – Psicoterapeuta<br />
+						Nº14057
+					</p>
+				</div>
+				<div class="col-lg-7 order-lg-first p-0 overflow-hidden shadow-lg">
+					<div class="overflow-hidden">
+						<img class="d-block rounded-lg-3 rounded-xlg-5 img-fluid" src="images/laia1.webp"
+							alt="Foto Laia Oliva">
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Sobre Mi -->
+		<section class="container mt-5">
+			<!-- Formació -->
+			<div class="row align-items-center">
+				<div class="col-lg-7">
+					<h2 id="formacio"><strong>Formació</strong></h2>
+					<p> Fa ja bastant temps, vaig cursar la llicenciatura de Psicologia en la UB, entre els anys
+						1997-2003.
+						Posteriorment vaig realitzar el Màster en Teràpia Cognitiu Social (UB), que sintetitzant,
+						aprofundia
+						en l'enfocament teòric i pràctic Constructivista, Humanista – Existencialista i Sistèmic.
+						Durant els anys de Màster vaig decidir marxar a Palo Alto, Califòrnia, al prestigiós Mental
+						Research
+						Institue (M.R.I), on vaig fer un curs en Teràpia Breu, centrada en les solucions.
+						Vaig tenir la sort de conèixer al gran Paul Watzlawick i a l'entrenyable Richard Fisch.
+					</p>
+					<p>
+						A Barcelona, en ple cor de l'Eixample, a l'Institut d’ Estudis la Sexualitat i la Parella
+						(I.E.S.P),
+						vaig realitzar el Postgrau en Teràpia de Parella.
+					</p>
+					<p>
+						Paral·lelament, durant aquells anys de formació de tercer cicle, vaig acudir a cursos sobre
+						diferents
+						temes relacionats amb aspectes vitals de l'ésser humà, formacions sobre temes que discorrien
+						sobre la
+						vida, la mort, l'ètica... exercits pel meu mestre i inspirador, el Dr. Manuel Villegas Besora,
+						creador
+						de la Teoria del Desenvolupament Moral.
+					</p>
+					<p>
+						Finalment vaig decidir deixar d'estudiar de forma reglada i tots aquests anys he anat
+						reciclant-me pel
+						que fa a la meva professió, al mateix temps que he anat estudiant de forma autodidàctica, amb
+						gran
+						interès sobre temes relacionats amb la Psicologia Crítica, Antipsiquiatria i la Post
+						Psiquiatria.
+					</p>
+				</div>
+				<div class="col-lg-5">
+					<div id="carouselFrases" class="carousel slide carousel-fade" data-bs-ride="carousel">
+						<div class="carousel-indicators">
+							<button type="button" data-bs-target="#carouselFrases" data-bs-slide-to="0" class="active"
+								aria-current="true" aria-label="Frase 1"></button>
+							<button type="button" data-bs-target="#carouselFrases" data-bs-slide-to="1"
+								aria-label="Frase 2"></button>
+							<button type="button" data-bs-target="#carouselFrases" data-bs-slide-to="2"
+								aria-label="Frase 3"></button>
+							<button type="button" data-bs-target="#carouselFrases" data-bs-slide-to="3"
+								aria-label="Frase 4"></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img src="images/frase1.jpg" class="d-block w-100" alt="Fons Frase 1">
+								<div class="carousel-caption d-flex align-items-center top-0">
+									<div class="card-body">
+										<blockquote class="blockquote">
+											<p>La curiosa paradoxa és que quan m'accepto tal com sóc, llavors és quan
+												puc canviar.</p>
+											<footer class="blockquote-footer mt-3 text-end">Carl Rogers</footer>
+										</blockquote>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="images/frase2.jpg" class="d-block w-100" alt="Fons Frase 2">
+								<div class="carousel-caption d-flex align-items-center top-0">
+									<div class="card-body">
+										<blockquote class="blockquote">
+											<p>La veritable felicitat està en acceptar-se un mateix i entrar en contacte
+												amb un mateix.</p>
+											<footer class="blockquote-footer mt-3 text-end">Carl Rogers</footer>
+										</blockquote>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="images/frase3.jpg" class="d-block w-100" alt="Fons Frase 3">
+								<div class="carousel-caption d-flex align-items-center top-0">
+									<div class="card-body">
+										<blockquote class="blockquote mb-0">
+											<p>Una persona, en descubrir que és estimada per ser com és, no pel que
+												pretèn ser, sentirà que mereix respecte i amor.</p>
+											<footer class="blockquote-footer mt-3 text-end">Carl Rogers</footer>
+										</blockquote>
+									</div>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img src="images/frase4.jpg" class="d-block w-100" alt="Fons Frase 4">
+								<div class="carousel-caption d-flex align-items-center top-0">
+									<div class="card-body">
+										<blockquote class="blockquote mb-0">
+											<p>La bona vida és un procés, no un estat del ser. Es tracta d'una direcció,
+												no d'un
+												destí.</p>
+											<footer class="blockquote-footer mt-3 text-end">Carl Rogers</footer>
+										</blockquote>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Pròpia experiència -->
+			<div class="row mt-5 align-items-center">
+				<div class="col-lg-8 ps-lg-3">
+					<h2 id="propia-experiencia"><strong>La meva pròpia vivència amb el sofriment psicològic</strong>
+					</h2>
+					<p>
+						Segons l'Organització Mundial de la Salut (OMS), una de cada quatre persones patirà un problema
+						de salut mental en algun moment de la seva vida, i l'ansietat serà un de les més comunes.
+					</p>
+					<p>
+						Tots som susceptibles de sofrir de malestar psicològic o també del que anomenem trastorns
+						psicològics. Jo mateixa he acudit al psicòleg durant algunes etapes de la meva vida perquè també
+						he patit a
+						aquest nivell.
+					</p>
+					<p>
+						Pot ser que al lector el disgusti llegir aquesta informació que dono de mi mateixa, però ho
+						exposo a propòsit, perquè és una forma de donar a entendre i mostrar, que tots podem passar
+						per episodis més o menys llargs, més o menys intensos, afectats per problemes psicològics.
+					</p>
+					<p>
+						Haver sofert mentalment i haver-me assegut en la cadira de «la persona que sofreix» en comptes
+						d'en la qual estic acostumada a estar, la de «la psicoterapeuta», m'ha permès no solament
+						entendre, sinó comprendre el dolor aliè, presentant-se aquest en les seves variades formes. Sé
+						el que és sofrir, ho he viscut en les
+						meves pròpies carns.
+						Entenc què es pot sentir explicant experiències privades a un desconegut, encara que aquest
+						sigui un
+						professional.
+						Considero que haver passat per aquest tipus de problemes i situacions ha servit també per
+						millorar en la meva professió, no tant a nivell de coneixements (prèviament adquirits), sí en
+						canvi a nivell humà.
+					</p>
+					<p>
+						Un psicòleg per sobre de tot, penso que ha de ser i mostrar la seva cara més «humana», tractar
+						amb
+						gran respecte
+						a la persona que sofreix, empatitzar i confiar en el canvi i la millora, perquè són clarament
+						possibles.
+						El sofriment i la seva superació, m'han permès en part, evolucionar en la meva forma de
+						treballar.
+					</p>
+				</div>
+				<div class="col-lg-4 order-lg-first p-0 shadow-lg">
+					<picture>
+						<source media="(min-width:992px)" srcset="images/laia2-v.jpg">
+						<img class="img-fluid" src="images/laia2.jpg" alt="Foto Laia Oliva">
+					</picture>
+				</div>
+			</div>
+			<!-- Com Treballo -->
+			<div class="row mt-5">
+				<h2 id="com-treballo"><strong>Com treballo</strong></h2>
+				<p>
+					Considero que em caracteritzen alguns aspectes que per a mi son bàsics en les teràpies que
+					realitzo. A més, surten de mi des de la més profunda autenticitat:
+				</p>
+			</div>
+			<div class="row row-cols-auto row-cols-lg-3 row-cols-xxl-4 gy-2">
+				<div class="col d-flex align-items-stretch">
+					<div class="card bg-color2">
+						<div class="card-body">
+							<h5 class="card-title">La Naturalitat:</h5>
+							<p class="card-text">Considero que per crear un bon vincle terapèutic entre la persona que
+								pateix i el
+								professional,
+								és important ser jo mateixa, mostrar-me tal com i com sóc. Des de la senzillesa, la
+								transparència
+								i també l’espontaneitat, que com em va dir un dia el professor Dr. Manel Villegas,
+								«l’espontaneitat
+								és el primer pas a la llibertat».</p>
+						</div>
+					</div>
+				</div>
+				<div class="col d-flex align-items-stretch">
+					<div class="card bg-color2">
+						<div class="card-body">
+							<h5 class="card-title">Empatia i Cures:</h5>
+							<p class="card-text">Durant les meves sessions, on escolto i faig un anàlisis del discurs
+								que emet la persona que
+								tinc davant,
+								procuro posar-me al seu lloc i d’ aquesta manera comprendre el seu estat, el seu dolor,
+								els
+								seus motius i
+								les seves accions. Etimològicament, la paraula psicoteràpia prové del grec, on psico
+								(psykhe) és ànima i
+								teràpia (therapeia) que és tractament, amb el significat d’atendre, cuidar i alleugerar.
+								Per
+								tant, podem dir
+								que la Psicoterapia és la cura de la ment o l’ ànima a través de les paraules.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col d-flex align-items-stretch">
+					<div class="card bg-color2">
+						<div class="card-body">
+							<h5 class="card-title">Escolta Activa:</h5>
+							<p class="card-text">Es pot escoltar de moltes maneres, però l'escolta terapèutica
+								implica mostrar interès
+								genuí en el què ens explica la persona, i aquest interès també es transmet a través
+								dels
+								gestos, un contacte visual d’igual a igual i una posició corporal receptiva, oberta
+								al
+								diàleg. L'escolta activa implica no interrompre, no qüestionar, simplement escoltar
+								i
+								mostrar-se afectuós. Es tracta d’una escolta reflexiva, el que implica comprendre,
+								acceptar les opinions o creences de l’altre, tot i no compartir-les. Ni judicis,
+								ni crítiques ni desqualificacions, ni exigències.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col d-flex align-items-stretch">
+					<div class="card bg-color2">
+						<div class="card-body">
+							<h5 class="card-title">La Proximitat:</h5>
+							<p class="card-text">Un tracte proper i facilitador de confiança, on el contacte hi és
+								present si s’escau,
+								afavorir el confort físic i emocional de la persona, amigable i afablement.
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col d-flex align-items-stretch">
+					<div class="card bg-color2">
+						<div class="card-body">
+							<h5 class="card-title">Respecte:</h5>
+							<p class="card-text">Tracte amb consideració plena i mirament cap a l’ altre, el respecte
+								implica un tracte amb
+								estima.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col d-flex align-items-stretch">
+					<div class="card bg-color2">
+						<div class="card-body">
+							<h5 class="card-title">Legitimació:</h5>
+							<p class="card-text">Reconèixer l’ autenticitat, entendre com a lícit el sentir, el que ens
+								manifesta i mostra,
+								allò que
+								ens explica la persona amb patiment psicològic.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col d-flex align-items-stretch">
+					<div class="card bg-color2">
+						<div class="card-body">
+							<h5 class="card-title">Acceptació Incondicional:</h5>
+							<p class="card-text">Acceptar sense condicions a la persona, la seva totalitat. Puc no
+								compartir la seva manera
+								de pensar
+								o d’opinar, però l'accepto sense condició.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Coneixement Situat -->
+			<div class="row mt-5">
+				<h2 id="coneixement-situat"><strong>Coneixement Situat</strong></h2>
+				<p>
+					Tant per la meva experiència com a psicòloga, com a persona que també ha passat pel patiment
+					psicològic, tant també pels meus principis i valors, per la meva dedicació autodidacta sobre
+					els temes relacionats amb la Psicologia Crítica, l'Antipsiquiatria i la Postpsiquiatria,
+					l'escolta activa de veus en 1ª persona,la voluntat per assolir que els tractaments psicològics
+					i psiquiàtrics siguin respectuosos i atents amb la persona que pateix, aconseguir que a Espanya
+					es respectin els DDHH de les persones que acudeixen en busca d’ajuda psico-mèdica.
+				</p>
+				<p>
+					També per la meva visió crítica i social de la psicologia, per la qual considero que molts dels mals
+					psicològics que passem les persones són causa directa d’una societat enmalaltida, on es
+					vulneren els drets fundamentals de les persones, on sembla que visquem en una selva on el més
+					fort viu folgadament i els altres intentem sobreviure. No només ho concebeixo a nivell macro
+					(sistema capitalista) sino també a nivell micro (entorn laboral, acadèmic, família...).
+				</p>
+				<p>
+					És per tot això que descric, que considero que la psicoterapia és també una eina que té el
+					deure de desindividualitzar el patiment psicològic amb la necessitat que tots prenguem
+					consciència que l’ individu o la persona que pateix psicològicamente presenta el síntoma d’un
+					entorn patologitzador.
+				</p>
+			</div>
+		</section>
+		<!-- Teràpia Psicològica -->
+		<section class="bg-color1 container mt-5" id="terapia">
+			<div class="row">
+				<h2><strong>Teràpia Psicològica</strong></h2>
+			</div>
+		</section>
+		<!-- Tallers -->
+		<section class="bg-color3 container mt-5" id="tallers">
+			<div class="row">
+				<h2><strong>Tallers</strong></h2>
+			</div>
+		</section>
+		<!-- Contacte -->
+		<section class="container mt-5 border shadow-lg" id="contacte">
+			<div class="row p-3 text-center">
+				<h2><strong>Contacta amb mi</strong></h2>
+			</div>
+			<div class="row p-3">
+				<div class="col-md-6">
+
+				</div>
+				<div class="col-md-6">
+					<form>
+						<div class="mb-3">
+							<label for="inputNom" class="form-label">Nom<small>*</small></label>
+							<input type="text" class="form-control" id="inputNom" aria-describedby="nomHelp" required>
+							<div id="nomHelp" class="form-text"><small>Escriu el teu nom per dirigir-me a tu.</small></div>
+						  </div>
+						<div class="mb-3">
+						  <label for="inputEmail" class="form-label">Correu Electrònic<small>*</small></label>
+						  <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" required>
+						  <div id="emailHelp" class="form-text"><small>Mai compartirem l'email amb ningú més.</small></div>
+						</div>
+						<div class="mb-3">
+							<label for="inputAssumpte" class="form-label">Assumpte</label>
+							<input type="text" class="form-control" id="inputAssumpte" aria-describedby="assumpteHelp">
+							<div id="AssumpteHelp" class="form-text"><small>Tema de la consulta.</small></div>
+						</div>
+						<div class="mb-3">
+							<label for="inputConsulta" class="form-label">Consulta<small>*</small></label>
+							<input type="text" class="form-control" id="inputConsulta" aria-describedby="consultaHelp">
+							<div id="AssumpteHelp" class="form-text"><small>Escriu aquí la teva consulta.</small></div>
+						</div>
+
+						<div>
+							<button type="submit" class="btn btn-primary">Envia</button>
+							<span id="passwordHelpInline" class="form-text ps-3"><small>Els camps marcats amb * són necessaris</small></span>
+						</div>
+					  </form>
+				</div>
+			</div>
+		</section>
+		<footer>
+
+		</footer>
+	</main>
+	<!-- Bootstrap JS Bundle with Popper -->
+	<!-- CDN-->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> -->
+	<!-- local -->
+	<script src="js/bootstrap.bundle.min.js" type="text/javascript"></script>
+</body>
+
+</html>

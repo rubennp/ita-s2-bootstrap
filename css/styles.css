@@ -1,0 +1,52 @@
+body { font-family: 'Merriweather', serif; }
+
+h1, h2, .navbar, dt { font-family: 'Fira Sans', sans-serif; }
+
+.navbar { background-color: white !important; }
+
+h1 { 
+    font-weight: 500; 
+    font-size: 3em; 
+}
+
+h2 { 
+    font-weight: 200;
+    font-size: 1.875em;
+}
+
+.text-logo p { 
+    font-weight: 200; 
+    margin: 0;
+}
+
+.text-logo p:last-of-type { 
+    font-weight: 100; 
+    font-size: 0.5em;
+    text-align: right;
+    line-height: .5em;
+}
+
+strong, dt {
+    box-shadow: inset 0 -0.5em rgba(0, 149, 145, 0.5);
+    text-shadow: 1px 1px rgb(0, 149, 145);
+}
+
+strong { font-weight: bolder; }
+
+dt { 
+    display: inline-block; 
+    font-weight: 200;
+}
+
+p:not(blockquote p), dd { text-align: justify; }
+
+.bg-secondary { background-color: #950004 !important; }
+
+.bg-secondary-light { background-color: #E7CFD1 !important; }
+
+.bg-primary-light { background-color: #CFE7E5 !important; }
+
+.bg-color1 { background-color: #FFD47E; }
+.bg-color2 { background-color: #D7E4BC; }
+.bg-color3 { background-color: #FFC4AC; }
+.bg-color4 { background-color: #D4E3FE, }
