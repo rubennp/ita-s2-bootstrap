@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "Fira Sans";
+    src: url("../fonts/FiraSans-100.ttf") format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    src: url("../fonts/FiraSans-200.ttf") format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    src: url("../fonts/FiraSans-500.ttf") format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Fira Sans";
+    src: url("../fonts/FiraSans-100.ttf") format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Merriweather";
+    src: url("../fonts/Merriweather-300.ttf") format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
