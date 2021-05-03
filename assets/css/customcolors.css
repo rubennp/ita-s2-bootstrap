@@ -1,0 +1,17 @@
+/* canviant classes */
+.text-primary { color: #198754 !important; }   /* $green */
+.text-secondary { color: #fd7e14 !important; } /* $orange */ 
+.text-success { color: #20c997 !important; }   /* $teal */
+.text-danger { color: #d63384 !important; }    /* $pink */
+.text-info { color: #6610f2 !important; }      /* $indigo */
+.text-light { color: #d1e7dd !important; }     /* $green-100 */
+.text-dark { color: #0b3623 !important; }      /* $green-800 */
+.text-muted { color: #c8cbcd !important; }     /* $gray-400 */
+.text-white { color: #f8f9fa !important; }     /* $gray-100 */
+
+/* canviant classes utilitzant canviant variables */
+.text-primary { color: var(--bs-green) !important; }
+.text-secondary { color: var(--bs-orange) !important; }
+.text-success { color: var(--bs-teal) !important; }
+.text-danger { color: var(--bs-pink) !important; }
+.text-info { color: var(--bs-indigo) !important; }

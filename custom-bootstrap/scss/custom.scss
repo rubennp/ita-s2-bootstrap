@@ -1,0 +1,21 @@
+// Custom.scss
+
+// importa només arxius necessaris:
+@import "../bootstrap/scss/functions";
+@import "../bootstrap/scss/variables";
+
+// custom colors:
+$theme-colors: (
+    primary: $green,
+    secondary: $orange,
+    success: $teal,
+    danger: $pink,
+    info: $indigo,
+    light: $green-100,
+    dark: $green-800,
+    muted: $gray-400,
+    white: $gray-100
+);
+
+// importa Bootstrap per efectuar canvis
+@import "../bootstrap/scss/bootstrap";

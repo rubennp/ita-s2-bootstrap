@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ca">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="IT Academy - Sprint 2: maquetació II (Bootstrap)">
+	<meta name="keywords" content="HTML5, CSS3, Bootstrap">
+	<meta name="author" content="Rubèn Nieto Perarnau">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>S2: Bootstrap - IT Academy</title>
+
+	<!-- 
+		a través de CDN: 
+	-->
+
+	<!-- Bootstrap -->
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"> -->
+
+	<!-- Google Fonts -->
+	<!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+	<!-- <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;200;500;900&family=Merriweather:wght@300&display=swap" rel="stylesheet"> -->
+	
+	<!-- Bootstrap ICONS -->
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"> -->
+
+	<!-- 
+		local:
+	-->
+	
+	<!-- Bootstrap -->
+	<!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+
+    <!-- Bootstrap amb colors personalitzats (mètode recomanat)-->
+    <link href="assets/css/bootstrap-custom.min.css" rel="stylesheet" type="text/css">
+
+	<!-- Fonts -->
+	<link href="assets/css/fonts.css" rel="stylesheet" type="text/css">
+
+	<!-- Bootstrap ICONS -->
+	<link href="assets/css/bootstrap-icons.css" rel="stylesheet" type="text/css">
+
+	<!-- Els meus estils -->
+	<link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+
+	<!-- Els meus colors (utilitzant CSS, mètode no recomanat) -->
+	<!-- <link href="assets/css/customcolors.css" rel="stylesheet" type="text/css"> -->
+
+
+</head>
+
+<body>
+	<!-- Login Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="loginModalLabel">Login</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tancar"></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<label for="loginUsername" class="form-label">Nom d'usuari o email:</label>
+						<div class="input-group mb-3">
+							<span class="input-group-text"><i class="bi bi-person"></i></span>
+							<span class="input-group-text"><i class="bi bi-at"></i></span>
+							<input type="text" class="form-control" placeholder="" aria-label="Usuari" aria-describedby="loginUsername" id="loginUsername" required>
+						</div>
+						<label for="loginPassword" class="form-label">Contrasenya:</label>
+						<div class="input-group mb-3">
+							<span class="input-group-text"><i class="bi bi-asterisk"></i></span>
+							<input type="password" class="form-control" placeholder="" aria-label="Password" aria-describedby="loginPassword" id="loginPassword" required>
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal"
+						data-bs-target="#registreModal">Registre</button>
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entra</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Registre Modal -->
+	<div class="modal fade" id="registreModal" tabindex="-1" aria-labelledby="registreModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="registreModalLabel">Registre</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tancar"></button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<label for="registreUsername" class="form-label">Nom d'usuari:</label>
+						<div class="input-group mb-3">
+							<span class="input-group-text"><i class="bi bi-person"></i></span>
+							<input type="text" class="form-control" placeholder="" aria-label="Nom d'usuari" aria-describedby="registreUsername" id="registreUsername" required>
+						</div><label for="registreEmail" class="form-label">Correu electrònic:</label>
+						<div class="input-group mb-3">
+							<span class="input-group-text"><i class="bi bi-at"></i></span>
+							<input type="text" class="form-control" placeholder="" aria-label="Nom d'usuari" aria-describedby="registreEmail" id="registreEmail" required>
+						</div>
+						<label for="registrePassword" class="form-label">Contrasenya:</label>
+						<div class="input-group mb-3">
+							<span class="input-group-text"><i class="bi bi-asterisk"></i></span>
+							<input type="password" class="form-control" placeholder="" aria-label="Password" aria-describedby="registrePassword" id="registrePassword">
+						</div>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-bs-dismiss="modal" data-bs-toggle="modal"
+						data-bs-target="#loginModal">Login</button>
+					<button type="button" class="btn btn-primary" data-bs-dismiss="modal">Registra't!</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm max-height-100">
+			<div class="container">
+				<a class="navbar-brand" href="#">
+					<img src="assets/images/emotions.svg" alt="Logotip" height="50">
+					<div class="float-start text-logo">
+						<p>Laia Oliva</p>
+						<p>Psicoterapeuta</p>
+					</div>
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-pills">
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdown" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">Sobre mi <small class="align-top"><i class="bi bi-box-arrow-up-right"></i></small>
+							</a>
+							<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<li><a class="dropdown-item" href="index.html#formacio">Formació</a></li>
+								<li><a class="dropdown-item" href="index.html#propia-experiencia">Pròpia vivència</a>
+								</li>
+								<li><a class="dropdown-item" href="index.html#com-treballo">Com treballo</a></li>
+								<li><a class="dropdown-item" href="index.html#coneixement-situat">Coneixement situat</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Teràpia psicològica</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Tallers</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="index.html#contacte"><i class="bi bi-envelope"></i></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="tel:0034680663495"><i class="bi bi-telephone"></i></a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link active" href="colors.html">Colors</a>
+						</li>
+					</ul>
+				</div>
+				<form class="d-flex">
+					<button class="btn btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
+						<i class="bi bi-box-arrow-in-right"></i> Login
+					</button>
+					<button class="btn btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#registreModal">
+						Registre
+					</button>
+				</form>
+			</div>
+		</nav>
+	</header>
+	<main class="container-fluid">
+        <div class="row m-5">
+            <div class="col">
+                <h2 class="text-primary">TEXT PRIMARY</h2>
+                <h2 class="text-secondary">TEXT SECONDARY</h2>
+                <h2 class="text-success">TEXT SUCCES</h2>
+                <h2 class="text-danger">TEXT DANGER</h2>
+                <h2 class="text-info">TEXT INFO</h2>
+                <h2 class="text-light">TEXT LIGHT</h2>
+                <h2 class="text-dark">TEXT DARK</h2>
+                <h2 class="text-muted">TEXT MUTED</h2>
+                <h2 class="text-white">TEXT WHITE</h2>
+            </div>
+        </div>
+    </main>
+	<!-- Bootstrap JS Bundle with Popper -->
+	<!-- CDN-->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script> -->
+	<!-- local -->
+	<script src="assets/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+</body>
+
+</html>
