@@ -8,6 +8,7 @@
 * En main hay el último ejercicio:
     * main -> ex3 (n3)
 
+~~~
 root
 |- index.html : ejercicio 1
 |- colors.html: ejercicio 2
@@ -32,3 +33,4 @@ root
 |  |... 
 |- custom-bootstrap: archivos bootstrap i scss retocado para ex2
 |  |...
+~~~
