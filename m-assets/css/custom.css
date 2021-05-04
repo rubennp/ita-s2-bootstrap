@@ -3,3 +3,9 @@ strong {
     text-shadow: 1px 1px rgb(0, 149, 145);
 }
 .navbar .navbar-brand, .navbar-brand { padding: 0; }
+
+.carousel .card .card-body { min-height: 0 !important; }
+
+.carousel .carousel-caption { padding-bottom: 20px !important; }
+
+p, div.card-text { text-align: justify; }
